@@ -57,14 +57,14 @@
             "--theme-color-warning": "#FFC107"
           }
         }
-      }
-    },
-    "initial_pages": {
-      "default": {
-        "name": "产品指南",
-        "default": true,
-        "pages": [
-        ]
+      },
+      "initial_pages": {
+        "default": {
+          "name": "产品指南",
+          "default": true,
+          "pages": [
+          ]
+        }
       }
     }
   },

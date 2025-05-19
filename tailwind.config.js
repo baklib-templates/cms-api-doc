@@ -1,35 +1,60 @@
-# wiki帮助中心 模板
-
-## 介绍
-
-## 开发
-
-```bash
-npm run dev
-```
-
-### 安装配置TailwindCSS
-[TailwindCSS官网](https://www.tailwindcss.cn/docs/installation)
-
-#### 1.安装Tailwindcss
-通过`npm`安装`tailwindcss`，然后创建`tailwind.config.js`配置文件
-```bash
-npm add -D tailwindcss
-npx tailwindcss init
-```
-#### 2.配置模板文件的路径和自定义样式
-```javascript
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  content: ["./templates/**/*.liquid", "./snippets/**/*.liquid", "./layout/**/*.liquid", "./statics/**/*.liquid"],
+  content: [
+    "./layout/**/*.liquid",
+    "./snippets/**/*.liquid",
+    "./templates/**/*.liquid",
+    "./statics/**/*.liquid"
+  ],
+  daisyui: {
+    themes: [
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "garden",
+      "forest",
+      "aqua",
+      "lofi",
+      "pastel",
+      "fantasy",
+      "wireframe",
+      "black",
+      "luxury",
+      "dracula",
+      "cmyk",
+      "autumn",
+      "business",
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+      "dim",
+      "nord",
+      "sunset"
+    ],
+    darkTheme: "dark", // name of one of the included themes for dark mode
+    base: true, // applies background color and foreground color for root element by default
+    styled: true, // include daisyUI colors and design decisions for all components
+    utils: true, // adds responsive and modifier utility classes
+    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+    themeRoot: ":root", // The element that receives theme color CSS variables
+  },
   darkMode: 'class',
   theme: {
     extend: {
       colors: () => {
         return {
-          slate: {
-            150: "#E9EEF5"
-          },
           ...["primary", "secondary", "accent", "info", "success", "warning"].reduce((map, name) => {
             return {
               ...map,
@@ -59,42 +84,11 @@ module.exports = {
             }, {})
           }
         }
-      },
-      spacing: {
-        4.5: "1.125rem",
-        5.5: "1.375rem",
-        18: "4.5rem",
-      },
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    //require("@tailwindcss/typography"),
+    require('daisyui')
+  ]
 }
-```
-#### 3.引入Tailwindcss到css文件中
-例如：`./src/main.css`
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@config '../tailwind.config.js'
-```
-#### 4.在`package.json`中配置css编译路径
-```json
-"scripts": {
-  "build": "npm-run-all --parallel build:css build:js",
-  "build:css": "npx tailwindcss -i ./src/main.css -o ./assets/css/main.css",
-  ......
-  "dev": "npm-run-all --parallel 'build:css -- --watch' 'build:js -- --watch'"
-}
-```
-#### 5.在`theme.liquid`文件中引入css
-```html
-{{ 'css/main.css' | asset_url | stylesheet_tag: data-turbo-track: 'reload' }}
-```
-
-
-## 编译&发布
-
-```bash
-yarn build
-```

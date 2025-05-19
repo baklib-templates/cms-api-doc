@@ -1,6 +1,6 @@
 {
-  "theme_label": "Wiki Marguerite",
-  "theme_description": "Le framework Web pour un site Web axé sur le contenu basé sur DaisyUI.",
+  "theme_label": "Api-Doc",
+  "theme_description": "Un modèle de documentation API clair et concis, prenant en charge les exemples de code et la mise en évidence des réponses. Convient à la gestion des interfaces et aux portails développeurs. Prise en charge multilingue et thèmes variés, idéal pour les plateformes orientées produit.",
   "generic": {
     "403": "403 Aucune autorisation d'accès",
     "404": "404 introuvable",

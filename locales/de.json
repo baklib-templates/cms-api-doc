@@ -1,6 +1,6 @@
 {
-  "theme_label": "Daisy-Wiki",
-  "theme_description": "Das Webframework für inhaltsgesteuerte Websites basierend auf DaisyUI.",
+  "theme_label": "Api-Doc",
+  "theme_description": "Eine übersichtliche und schlanke API-Dokumentationsvorlage mit Unterstützung für Codebeispiele und hervorgehobene Antwortinhalte. Geeignet für Schnittstellenverwaltung und Entwicklerportale. Mehrsprachigkeit und verschiedene Farbschemata machen sie ideal für anpassbare Produktplattformen.",
   "generic": {
     "403": "403 Keine Zugriffsberechtigung",
     "404": "404 Nicht gefunden",

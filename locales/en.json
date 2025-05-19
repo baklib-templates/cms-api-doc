@@ -1,6 +1,6 @@
 {
-  "theme_label": "Daisy Wiki",
-  "theme_description": "The web framework for content-driven website based on DaisyUI.",
+  "theme_label": "Api-Doc",
+  "theme_description": "A clean and concise API documentation template that supports code examples and highlighted response content. Suitable for interface management and developer portals. Supports multiple languages and theme colors, ideal for customization in product-oriented platforms.",
   "generic": {
     "menu": "Menu",
     "theme": "Theme",

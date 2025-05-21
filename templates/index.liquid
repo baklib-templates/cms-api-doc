@@ -1,12 +1,22 @@
-
 <section id="table-of-contents" aria-labelledby="table-of-contents-title" class="">
+  {% if page.settings.api_document %}
   <elements-api
-  id="docs"
-  apiDescriptionUrl="https://ecd7c5ff3a99.baklib.com/-/dam/assets/organization_w63c8kv--main-version/eyJfcmFpbHMiOnsiZGF0YSI6eyJpZCI6MTEwNjYwLCJwYXRoIjoib3BlbmFwaS5qc29uIiwidGltZXN0YW1wIjoiMjAyNS0wNS0xOSAwOTozNzo0NiArMDgwMCJ9LCJwdXIiOiJvcmdhbml6YXRpb25fdzYzYzhrdi0tbWFpbi12ZXJzaW9uIn19--9610bf616328b08d4e16861d38c1275102fc139cd3e540301d70ef60fa3ec5bc/openapi.json"
+  data-controller="element_doc"
+  data-element_doc-content-value="{{ page.settings.api_document }}"
   router="hash"
   hideTryIt = "true"
   layout="responsive"
   />
+  {% endif %}
+
+  {% if page.settings.api_document_url %}
+    <elements-api
+    apiDescriptionUrl="{{ page.settings.api_document_url }}"
+    router="hash"
+    hideTryIt = "true"
+    layout="responsive"
+    />
+  {% endif %}
 </section>
 
 
@@ -21,36 +31,20 @@
 "sub_page_templates": ["page"],
 "settings": [
 {
-"id": "hero_image_url",
-"type": "image_picker",
-"ratio": "19:6",
-"width": 900,
-"label": "t:settings_schema.generic.settings.hero_image_url.label",
-"info": "t:settings_schema.generic.settings.hero_image_url.info"
-},
-{
 "id": "title",
 "type": "text",
 "label": "t:settings_schema.generic.settings.title.label",
 "default": "Knowledge base site"
 },
 {
-"id": "description",
-"type": "textarea",
-"label": "t:settings_schema.generic.settings.description.label",
-"default": "👋 What Can We Help?"
-},
-{
-"id": "hot_tags",
-"label": "t:settings_schema.generic.settings.hot_tags.label",
-"type": "text",
-"placeholder": "sign in,install,account,how to"
-},
-{
 "id": "api_document",
 "type": "textarea",
-"label": "t:settings_schema.generic.settings.description.label",
-"default": "👋 What Can We Help?"
+"label": "t:settings_schema.generic.settings.api_document.label"
+},
+{
+"id": "api_document_url",
+"type": "text",
+"label": "t:settings_schema.generic.settings.api_document_url.label"
 }
 ]
 }

@@ -20,6 +20,12 @@
         "hot_tags": {
             "label": "热搜关键词（请用英文逗号「,」分隔）"
         },
+        "api_document_url": {
+          "label": "OpenAPI文档URL"
+        },
+        "api_document": {
+          "label": "OpenAPI文档内容"
+        },
         "copyright_info": {
           "label": "备案/版权信息",
           "default": "蜀ICP备15035023号"

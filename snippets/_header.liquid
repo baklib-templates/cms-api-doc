@@ -1,4 +1,4 @@
-<header id="header" class="sticky top-0 z-30">
+<header id="header" class="sticky top-0">
   <nav class="{%- if page.slug == nil -%} mx-auto max-w-screen-xl {% endif %} navbar bg-base-100/90 opacity-80 shadow-sm backdrop-blur-lg justify-center items-center py-2 md:px-10 px-2 border-b border-base-content/10">
 
     <div class="navbar-start">
@@ -14,7 +14,6 @@
         </h1>
       </a>
 
-      {% # PC端自定义导航菜单 %}
       <ul class="hidden border-l menu menu-horizontal lg:flex">
         {% if site.settings.header_menu_html %}
           {{ site.settings.header_menu_html }}
@@ -33,7 +32,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </div>
-        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow menu-vertical">
           {% if site.settings.header_menu_html %}
             {{ site.settings.header_menu_html }}
           {% else %}

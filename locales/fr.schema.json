@@ -20,6 +20,12 @@
         "hot_tags": {
           "label": "Mots-clés de recherche chauds (veuillez les séparer par une virgule anglaise : ,)"
         },
+        "api_document_url": {
+          "label": "URL de la documentation OpenAPI"
+        },
+        "api_document": {
+          "label": "Contenu de la documentation OpenAPI"
+        },
         "company_name": {
           "label": "Nom de l'entreprise",
           "default": "Tanmer inc."

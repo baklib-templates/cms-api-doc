@@ -20,6 +20,12 @@
         "hot_tags": {
             "label": "Hot search keywords (please separate them with English comma: ,)"
         },
+        "api_document_url": {
+          "label": "OpenAPI Document URL"
+        },
+        "api_document": {
+          "label": "OpenAPI Document Content"
+        },
         "company_name": {
           "label": "Company Name",
           "default": "Tanmer Inc."

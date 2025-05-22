@@ -6215,3 +6215,8 @@ body {
   height: 100vh;
 }
 
+section {
+  flex: 1 0 0;
+  overflow: hidden;
+}
+

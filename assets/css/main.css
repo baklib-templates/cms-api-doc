@@ -6213,7 +6213,7 @@ body {
   height: 100vh;
 }
 
-section {
-  flex: 1 0 0;
-  overflow: hidden;
+.sl-text-base {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
 }
